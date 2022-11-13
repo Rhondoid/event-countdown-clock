@@ -6,19 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
     <title>Event Countdown Clock</title>
+    <!-- <style>
+        #button {
+            display: flex;
+        }
+    </style> -->
 </head>
 <body>
     <h1> New Year Countdown</h1>
-    <input type="date" name="newYear" id="newYear">
+    <div class="date">
+        
+        <button type="submit">Submit</button>
+        <input type="date" name="newYear" id="newYear">
+    </div>
     <div class="flexbox-container " >
         <div class="flexbox-item flexbox-item-1">New York, US
-            <div class ="countdown-timer1"></div>
+            <div class ="countdown-timer1">timer displayed</div>
         </div>
         <div class="flexbox-item flexbox-item-1">Paris, France
-            <div class ="countdown-timer2"></div>
+            <div class ="countdown-timer2">timer displayed</div>
         </div>
-        <div class="flexbox-item flexbox-item-1">Sydney, Australia
-            <div class ="countdown-timer3"></div>
+        <div class="flexbox-item flexbox-item-1" >Sydney, Australia
+            <div class ="countdown-timer3">timer displayed</div>
         </div>
     </div>
     <script src="script.js"> </script>
