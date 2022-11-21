@@ -13,12 +13,16 @@ This application is a fun and entertaining countdown clock:
 ## Installation
 
 What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+https://rhondoid.github.io/event-countdown-clock/
+https://app.castify.com/watch/0eef2684-8528-4516-83a0-150d726e33d3
+
 
 ## Usage
 
 You can enter a date and time of the event you want to count down to. Then add your name or event name, when you hit the submit button it starts the counters and displays your name or event name. When the timers hit zero it displays an image of confetti. 
 
 ![image](https://user-images.githubusercontent.com/110504360/203154560-d6aa0cef-aa16-4f99-ab8a-ccd1c74d3b22.png)
+
 
 
 ## Credits
