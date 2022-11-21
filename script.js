@@ -28,20 +28,18 @@ var sydneyEl=document.getElementById('sydney');
 var countDownEl=document.getElementById("countdown");
 var dateInputEl=document.getElementById('date');
 var timeInputEl=document.getElementById('time');
+var ipDateEl=document.getElementById('ipDate');
+var nameEl=document.getElementById('name');
+var showName=document.getElementById('showName');
 
 var giphyRequestUrl="https://api.giphy.com/v1/gifs/random?api_key=jtstBKPePsw6EBHS3rBIUAGQqchRC2MJ&tag=confetti+celebration&rating=g"
 
 var countDownDate=new Date("").getTime();
-var dateNewYork=new Date("").getTime();
-var dateParis=new Date("").getTime();
-var dateSydney=new Date("").getTime();
+var myName='';
 
 
-
-
-// console.log("hi")
 timeEl.innerText= Date()
-//var responseStuff = {};
+
 fetch(giphyRequestUrl) 
   .then( (response) => {
     return(response.json());
@@ -51,44 +49,25 @@ fetch(giphyRequestUrl)
   });
 
 
-fetch("http://worldtimeapi.org/api/timezone/Australia/Sydney")
+fetch("http://worldtimeapi.org/api/ip")
   .then(function(data) {
     return data.json();
   })
   .then(function(response) {
-    console.log(Date(Date.parse(response.datetime)));
-
-console.log(calcTime(response.utc_offset))
-    
+    countDownDate=(Date(response.datetime));
+    ipDateEl.innerText=countDownDate.toString();
   })
 
-function calcTime(city, offset) {
-    // create Date object for current location
-    var d = new Date();
-
-    // convert to msec
-    // subtract local time zone offset
-    // get UTC time in msec
-    var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-
-    // create new Date object for different city
-    // using supplied offset
-    var nd = new Date(utc + (3600000*offset));
-
-    // return time as a string
-    return nd.toString();
-}
-
-
-
+function userInput(){
+  var dateTime= dateInputEl.value + " " + timeInputEl.value;
   
-  function userInput(){
-    var dateTime= dateInputEl.value + " " + timeInputEl.value;
-    
-    var newGetTime = new Date(dateTime).getTime();
-    countDownDate=newGetTime;
-    
-  }
+  var newGetTime = new Date(dateTime).getTime();
+  countDownDate=newGetTime;
+
+  localStorage.setItem('name', nameEl.value)
+  myName=localStorage.getItem('name')
+  showName.innerText='Welcome '+myName
+}
 
 
 
@@ -128,7 +107,9 @@ function calcTime(city, offset) {
 
   }, 1000);
   
-// localStorage setItem()
-// localStorage getItem()
+
+
+myName=localStorage.getItem('name')
+showName.innerText='Welcome '+myName
 
 
