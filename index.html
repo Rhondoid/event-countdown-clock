@@ -10,8 +10,7 @@
 <body>
     <h1> Countdown</h1>
     <p id="showName" class="text-green-900"></p>
-    <p>Date based on IP</p>
-    <p id="ipDate"></p>
+    <span>name:</span><input id="name">
     <p id="countdown"></p>
     <div class="date">
         <button onclick="userInput()" type="submit">Submit</button>
@@ -19,9 +18,7 @@
         <input type="time" name="city" id="time">
     </div>
     <div>
-        
-        <span>name:</span><input id="name">
-        
+       
     </div>
     <div class="flexbox-container " >
         
@@ -35,18 +32,16 @@
         </div>
         <div class="flexbox-item flexbox-item-3" >Sydney, Australia
             <div id="sydney" class ="clock-timer3">timer displayed</div>
-            
         </div>
         <div id="time">
+
         </div>
-        <!-- <img src="" id="giphy"></img> -->
-
-        <iframe style="display:none" id="giphy" src="" width="480" height="240" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-        
+        <iframe style="display:center" id="giphy" src="" width="480" height="240" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <p>Date based on IP</p>
+        <p id="ipDate"></p>
     </div>
-    
-
-    <img src="" alt="">
+     
+     
     <script src="script.js"> </script>
     <script src="countdown.js"></script>
 

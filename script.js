@@ -1,5 +1,4 @@
-// var moment = require('moment');
-// moment().format();
+//this will pull the timezone for current plus each city
 class TimeDistance{
   constructor(distance, offSetHour, customEl){
     distance += offSetHour *1000 * 60 * 60;
@@ -13,6 +12,7 @@ class TimeDistance{
       customEl.innerHTML= "Yay!";
     }
   }
+  //posts to the HTML for all clocks
   createInnerHTML(){
     return this.days + "d " + this.hours + "h "
     + this.minutes + "m " + this.seconds + "s ";
@@ -31,7 +31,7 @@ var timeInputEl=document.getElementById('time');
 var ipDateEl=document.getElementById('ipDate');
 var nameEl=document.getElementById('name');
 var showName=document.getElementById('showName');
-
+//API for Giphy image
 var giphyRequestUrl="https://api.giphy.com/v1/gifs/random?api_key=jtstBKPePsw6EBHS3rBIUAGQqchRC2MJ&tag=confetti+celebration&rating=g"
 
 var countDownDate=new Date("").getTime();
@@ -63,19 +63,15 @@ function userInput(){
   
   var newGetTime = new Date(dateTime).getTime();
   countDownDate=newGetTime;
-
+//storing and posting user name
   localStorage.setItem('name', nameEl.value)
   myName=localStorage.getItem('name')
   showName.innerText='Welcome '+myName
 }
 
-
-
   // Update the count down every 1 second
   var x = setInterval(function() {
     
-  
-  
    // Get today's date and time
     var now = new Date().getTime();
       
@@ -91,15 +87,8 @@ function userInput(){
     var timeDistanceParis= new TimeDistance(distanceParis,10, parisEl)
     var timeDistanceSydney= new TimeDistance(distanceSydney,15, sydneyEl)
       
-    // Output the result in an element with id="demo"
-    // countDownEl.innerHTML = timeDistance.createInnerHTML()
-    // newYorkEl.innerHTML = timeDistanceNewYork.createInnerHTML()
-    // parisEl.innerHTML = timeDistanceParis.createInnerHTML()
-    // sydneyEl.innerHTML = timeDistanceSydney.createInnerHTML()
     
-    
-      
-    // If the count down is over, write some text
+    // If the count down is over, write yay! and disply giphy image
     if (distance < 0) {
       // clearInterval(x);
       giphyEl.style.display="block";
@@ -107,7 +96,6 @@ function userInput(){
 
   }, 1000);
   
-
 
 myName=localStorage.getItem('name')
 showName.innerText='Welcome '+myName
