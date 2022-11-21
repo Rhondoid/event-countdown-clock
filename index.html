@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>Event Countdown Clock</title>
+    <link rel="stylesheet" href="./assets/style.css"><title>Event Countdown Clock</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
     <!-- <style>
         #button {
             display: flex;
@@ -14,23 +14,36 @@
 </head>
 <body>
     <h1> New Year Countdown</h1>
+    
+    <p id="countdown"></p>
     <div class="date">
-        
-        <button type="submit">Submit</button>
-        <input type="date" name="newYear" id="newYear">
+        <button onclick="userInput()" type="submit">Submit</button>
+        <input type="date" name="city" id="date">
+        <input type="time" name="city" id="time">
     </div>
     <div class="flexbox-container " >
         <div class="flexbox-item flexbox-item-1">New York, US
-            <div class ="countdown-timer1">timer displayed</div>
+            <div id="newyork" class ="clock">timer displayed</div>
+            
         </div>
-        <div class="flexbox-item flexbox-item-1">Paris, France
-            <div class ="countdown-timer2">timer displayed</div>
+        <div class="flexbox-item flexbox-item-2">Paris, France
+            <div id="paris" class ="clock-timer2">timer displayed</div>
+            
         </div>
-        <div class="flexbox-item flexbox-item-1" >Sydney, Australia
-            <div class ="countdown-timer3">timer displayed</div>
+        <div class="flexbox-item flexbox-item-3" >Sydney, Australia
+            <div id="sydney" class ="clock-timer3">timer displayed</div>
+            
         </div>
+        <div id="time">
+        </div>
+        <!-- <img src="" id="giphy"></img> -->
+
+        <iframe style="display:none" id="giphy" src="" width="480" height="240" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        
     </div>
+    <img src="" alt="">
     <script src="script.js"> </script>
     <script src="countdown.js"></script>
+
 </body>
 </html
