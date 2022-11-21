@@ -5,16 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css"><title>Event Countdown Clock</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
-    <!-- <style>
-        #button {
-            display: flex;
-        }
-    </style> -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <h1> Countdown</h1>
-    <p id="showName"></p>
+    <p id="showName" class="text-green-900"></p>
     <p>Date based on IP</p>
     <p id="ipDate"></p>
     <p id="countdown"></p>
@@ -29,6 +24,12 @@
         
     </div>
     <div class="flexbox-container " >
+        <div class="flex justify-center"> 
+            <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">    
+                <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">New York</h5>    
+                <div id="newyork" class ="clock">timer displayed</div>
+            </div>
+        </div>
         <div class="flexbox-item flexbox-item-1">New York, US
             <div id="newyork" class ="clock">timer displayed</div>
             
@@ -48,6 +49,8 @@
         <iframe style="display:none" id="giphy" src="" width="480" height="240" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
         
     </div>
+    
+
     <img src="" alt="">
     <script src="script.js"> </script>
     <script src="countdown.js"></script>
